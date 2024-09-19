@@ -19,7 +19,7 @@ export const sendSmsOtp = async (phone, otp) => {
     const body = new URLSearchParams({
       To: "+" + phone,
       From: twilioNumber,
-      Body: `Your OTP code for verifying your 1Fi account is ${otp}. This code is valid for the next 5 minutes. Please use it to complete your verification process.`,
+      Body: `The OTP code for verifying your 1Fi account is ${otp}. This code is valid for the next 5 minutes. Please use it to complete your verification process.`,
     });
 
     const response = await fetch(
